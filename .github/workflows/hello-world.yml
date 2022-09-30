@@ -1,0 +1,8 @@
+name: Hello World
+on: [push]
+
+jobs:
+  ci:
+    runs-on: self-hosted
+    steps:
+      - run: echo hello world
