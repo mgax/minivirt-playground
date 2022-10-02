@@ -3,6 +3,11 @@ on: [push]
 
 jobs:
   ci:
+    strategy:
+      matrix:
+        number: ['1', '2', '3', '4']
+
     runs-on: self-hosted
+
     steps:
-      - run: echo hello world
+      - run: echo Hello ${{ matrix.number }}
